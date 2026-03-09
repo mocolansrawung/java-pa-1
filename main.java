@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class main {
   public static void main(String[] args) {
     Mahasiswa[] daftarMahasiswa = new Mahasiswa[5];
@@ -12,6 +14,37 @@ public class main {
     System.out.println("=== Data Mahasiswa ===\n");
     for (Mahasiswa mahasiswa : daftarMahasiswa) {
       mahasiswa.tampilkanInfo();
+      System.out.println();
     }
+
+    // Soal 2: Enkapsulasi dan Update IPK
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Masukkan NIM mahasiswa yang ingin diupdate: ");
+    String nimInput = scanner.nextLine().trim();
+
+    Mahasiswa targetMahasiswa = null;
+    for (Mahasiswa mahasiswa : daftarMahasiswa) {
+      if (mahasiswa.getNim().equals(nimInput)) {
+        targetMahasiswa = mahasiswa;
+        break;
+      }
+    }
+
+    if (targetMahasiswa != null) {
+      System.out.print("Masukkan IPK baru: ");
+      double ipkBaru = scanner.nextDouble();
+      scanner.nextLine();
+
+      targetMahasiswa.updateIpk(ipkBaru);
+      System.out.println("Data berhasil diperbarui!\n");
+
+      System.out.println("=== Data Mahasiswa ===\n");
+      targetMahasiswa.tampilkanInfo();
+      targetMahasiswa.cekKelulusan();
+    } else {
+      System.out.println("NIM tidak ditemukan dalam sistem.\n");
+    }
+
+    scanner.close();
   }
 }
