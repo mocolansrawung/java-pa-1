@@ -45,4 +45,25 @@ public class Mahasiswa {
   public void updateIpk(double ipkBaru) {
     setIpk(ipkBaru);
   }
+
+  public void hitungPredikat() {
+    String predikat;
+    if (ipk >= 3.75) {
+      predikat = "Dengan Pujian";
+    } else if (ipk >= 3.50) {
+      predikat = "Sangat Memuaskan";
+    } else if (ipk >= 3.00) {
+      predikat = "Memuaskan";
+    } else {
+      predikat = "Perlu Perbaikan";
+    }
+    System.out.println("Predikat: " + predikat);
+  }
+
+  public void tampilkanInfoLengkap() {
+    tampilkanInfo();
+    cekKelulusan();
+    hitungPredikat();
+    System.out.println();
+  }
 }

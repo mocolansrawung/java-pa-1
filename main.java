@@ -11,6 +11,7 @@ public class main {
     daftarMahasiswa[4] = new Mahasiswa("345678", "Rizky", "Teknik Sipil", 3.6);
 
     // Soal 1: Menampilkan informasi semua mahasiswa yang ada
+    System.out.println("Soal 1: Menampilkan informasi semua mahasiswa yang ada\n");
     System.out.println("=== Data Mahasiswa ===\n");
     for (Mahasiswa mahasiswa : daftarMahasiswa) {
       mahasiswa.tampilkanInfo();
@@ -18,6 +19,7 @@ public class main {
     }
 
     // Soal 2: Enkapsulasi dan Update IPK
+    // System.out.println("Soal 2: Enkapsulasi dan Update IPK\n");
     Scanner scanner = new Scanner(System.in);
     System.out.print("Masukkan NIM mahasiswa yang ingin diupdate: ");
     String nimInput = scanner.nextLine().trim();
@@ -43,6 +45,14 @@ public class main {
       targetMahasiswa.cekKelulusan();
     } else {
       System.out.println("NIM tidak ditemukan dalam sistem.\n");
+    }
+    System.out.println();
+
+    // Soal 3: Menampilkan predikat akademik seluruh mahasiswa
+    System.out.println("Soal 3: Menampilkan predikat akademik seluruh mahasiswa\n");
+    System.out.println("=== Data Mahasiswa ===\n");
+    for (Mahasiswa mahasiswa : daftarMahasiswa) {
+      mahasiswa.tampilkanInfoLengkap();
     }
 
     scanner.close();
