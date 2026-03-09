@@ -19,7 +19,7 @@ public class main {
     }
 
     // Soal 2: Enkapsulasi dan Update IPK
-    // System.out.println("Soal 2: Enkapsulasi dan Update IPK\n");
+    System.out.println("Soal 2: Enkapsulasi dan Update IPK\n");
     Scanner scanner = new Scanner(System.in);
     System.out.print("Masukkan NIM mahasiswa yang ingin diupdate: ");
     String nimInput = scanner.nextLine().trim();
