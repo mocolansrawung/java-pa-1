@@ -11,12 +11,11 @@ public class Mahasiswa {
     this.ipk = ipk;
   }
 
-  public String tampilkanInfo() {
-    return (
-      "Nama: " + nama + "\n" +
-      "NIM: " + nim + "\n" +
-      "Jurusan: " + jurusan + "\n" +
-      "IPK: " + ipk + "\n"
-    );
+  public void tampilkanInfo() {
+    System.out.println("Nama    : " + nama);
+    System.out.println("NIM     : " + nim);
+    System.out.println("Jurusan : " + jurusan);
+    System.out.printf ("IPK     : %.2f%n", ipk);
+    System.out.println();
   }
 }
